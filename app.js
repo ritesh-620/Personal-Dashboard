@@ -59,7 +59,7 @@ function initializeSmoothScrolling() {
 }
 
 function setupLiveGoalsCounter() {
-    // HTML me se 'Daily Goals' waale metric card ko find karte hain
+  
     const metricCards = document.querySelectorAll('.metric-card');
     let goalsCardValueNode = null;
 
@@ -71,20 +71,19 @@ function setupLiveGoalsCounter() {
 
     if (!goalsCardValueNode) return;
 
-    // Saare checkboxes select karein (check1, check2, check3, check4)
     const taskCheckboxes = document.querySelectorAll('.Tasks input[type="checkbox"]');
     
     function updateCounter() {
         const totalTasks = taskCheckboxes.length;
-        // Pata lagao kitne checked hain
+    
         const completedTasks = Array.from(taskCheckboxes).filter(cb => cb.checked).length;
         
-        // Base score humne 6 pakda hai (baki ke tasks jo pending upar dikh rahe hain unke liye)
+    
         const baseScore = 6; 
         const liveScore = baseScore + completedTasks;
         const totalPossible = baseScore + totalTasks;
 
-        // Dashboard par score update karein
+        
         goalsCardValueNode.textContent = `${liveScore} / ${totalPossible}`;
     }
 
@@ -99,11 +98,11 @@ function renderVisualProgressBars() {
     const progressBars = document.querySelectorAll('.Progress-bar');
     
     progressBars.forEach(bar => {
-        const percentageText = bar.textContent.trim(); // E.g., "70%"
-        const percentage = parseInt(percentageText); // Convert to number: 70
+        const percentageText = bar.textContent.trim();
+        const percentage = parseInt(percentageText); 
         
         if (!isNaN(percentage)) {
-            // CSS manipulation dynamically to show filling effect
+            
             bar.style.position = 'relative';
             bar.style.overflow = 'hidden';
             bar.style.zIndex = '1';
@@ -113,4 +112,19 @@ function renderVisualProgressBars() {
             bar.style.border = '1px solid rgba(51, 195, 240, 0.4)';
         }
     });
+}
+
+function openSidebar(){
+  document.getElementById("sidebar").classList.add("active");
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closeSidebar(){
+  document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+}
+
+function logout(){
+  alert("Logged out");
+  window.location.href = "index.html";
 }

@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="main">
-        <div class="profile">
+        <div class="profile" onclick="openSidebar()">
         <i class="fa-solid fa-circle-user"></i>
         </div>
       <nav class="nav-container">
@@ -195,7 +195,20 @@
             </div>
         </div>
     </div>
-  
+
+<div id="sidebar" class="sidebar">
+    <div class="profile">
+        <i class="fa-solid fa-circle-user"></i>
+        </div>
+    <h3>Profile</h3>
+
+    <button onclick="logout()">Logout
+    <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+
+</div>
+
+<div id="overlay" onclick="closeSidebar()"></div>
   <script src="app.js"></script>
 </body>
 </html>
