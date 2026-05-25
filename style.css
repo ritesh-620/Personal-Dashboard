@@ -19,21 +19,11 @@ body {
     align-items: center;
     padding: 0 40px;
 }
-.logo {
-    color: #0F172A;
-    font-size: 26px;
-    font-weight: bold;
+.profile i{
+  color:white;
+  font-size:  40px;
 }
 
-.logo a {
-    text-decoration: none;
-    color: #0F172A;
-}
-
-.nav-container {
-    display: flex;
-    gap: 15px;
-}
 
 .btn {
     padding: 8px 16px;
@@ -227,7 +217,7 @@ body {
 .dropdown-content a {
     color: #E2E8F0;
     padding: 12px 16px;
-    text-dash-style: none;
+    text-emphasis-style: none;
     text-decoration: none;
     display: block;
     font-size: 14px;
@@ -291,4 +281,29 @@ body {
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
+}
+.Tasks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 10%;
+}
+.dsa,.aptitude,.web-d,.revision{
+    height: 120px;
+    width: 100%;
+    background-color: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color: #33C3F0;
+}
+input[type="checkbox"]:checked + label{
+  text-decoration: line-through;
+  color: gray;
 }

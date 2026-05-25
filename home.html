@@ -9,12 +9,20 @@
 </head>
 <body>
   <header class="main">
-      <div class="logo">
-          <a id="btn-name">Personal Dashboard </a>
-      </div>
+        <div class="profile">
+        <i class="fa-solid fa-circle-user"></i>
+        </div>
       <nav class="nav-container">
         <a href="#DailyGoals" class="btn">Daily Goals</a>
-        <a href="#Tasks" class="btn">Tasks</a>
+        <div class="dropdown">
+            <a href="#Tasks" class="btn">Tasks ▾</a>
+            <div class="dropdown-content">
+             <a href="#dsa">DSA</a>
+             <a href="#aptitude">Apptitude</a>
+             <a href="#web-d">Web-D</a>
+             <a href="#revision">Revision</a>
+            </div>
+        </div>
         <div class="dropdown">
             <a href="#projects" class="btn dropdown-btn">Projects ▾</a>
             <div class="dropdown-content">
@@ -103,7 +111,42 @@
         </tbody>
     </table>
     </div>
-    <div class="Progress">
+    <div class="Tasks" id="Tasks">
+        <div class="dsa" id="dsa">
+            <h2>DSA</h2>
+            <p>To complete one question</p>
+            <div class="task">
+                <input type="checkbox" id="check1">
+                <label for="check1">Completed</label>
+            </div>
+        </div>
+        <div class="aptitude" id="aptitude">
+            <h2>APTITUDE</h2>
+            <p>To cover one topic</p>
+            <div class="task">
+                <input type="checkbox" id="check1">
+                <label for="check1">Completed</label>
+            </div>
+        </div>
+        <div class="web-d" id="web-d">
+            <h2>WEB-D</h2>
+            <p>To cover new topic</p>
+            <div class="task">
+                <input type="checkbox" id="check1">
+                <label for="check1">Completed</label>
+            </div>
+        </div>
+        <div class="revision" id="revision">
+            <h2>REVISION</h2>
+            <p>Revise the previous topic</p>
+            <div class="task">
+                <input type="checkbox" id="check1">
+                <label for="check1">Completed</label>
+            </div>
+        </div>
+    </div>
+    <div  class="Progress" id="Progress">
+
         <div class="Coding-Progress">
            
            <div class="Java">
