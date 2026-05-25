@@ -13,142 +13,92 @@
         <i class="fa-solid fa-circle-user"></i>
         </div>
       <nav class="nav-container">
-        <a href="#DailyGoals" class="btn">Daily Goals</a>
-        <div class="dropdown">
-            <a href="#Tasks" class="btn">Tasks ▾</a>
-            <div class="dropdown-content">
-             <a href="#dsa">DSA</a>
-             <a href="#aptitude">Apptitude</a>
-             <a href="#web-d">Web-D</a>
-             <a href="#revision">Revision</a>
-            </div>
-        </div>
+        <a href="#Tasks" class="btn">Tasks</a>
+        <a href="#Notes" class="btn">Notes</a>
         <div class="dropdown">
             <a href="#projects" class="btn dropdown-btn">Projects ▾</a>
             <div class="dropdown-content">
                 <a href="https://ritesh-620.github.io/personalportfolio/" target="_blank">My Portfolio Website</a>
-                <a href="#home">Personal Dashboard</a>
+                <a href="#home">Placement Preparation Dashboard</a>
             </div>
         </div>
-        <a href="#Progress" class="btn">Progress</a>
+        <a href="#Resume" class="btn">Resume</a>
+       <i class="fa-solid fa-bell" style="color: rgb(22, 18, 45);"></i>
     </nav>
   </header>
   
   <section id="home" class="main-container">
-        <div class="LEFT">
+        <div class="LEFT"> 
             <h1 class="intro">
-                <span class="intro1">Welcome,</span>
-                <span class="intro2">Back</span>
-                <span class="intro3">User</span>
+                Track Your <span class="intro1">Placement</span><br>
+                Preparation Journey
             </h1>
+
+            <p class="hero-description">
+                Stay consistent with DSA, Aptitude, Web Development,
+                Revision, Resume Building and Interview Preparation —
+                all in one dashboard.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#Tasks" class="hero-btn">Start Tracking</a>
+                <a href="#Progress" class="hero-btn secondary-btn">View Progress</a>
+            </div>
             <h2 class="text1">
                 <span>Track Your Daily Progress</span>
             </h2>
         </div>
 
-        <div class="RIGHT">
-        <div class="Upcoming-Tasks">
-            <h3>Upcoming Tasks</h3>
-            <ul class="task-list">
-                <li>Morning Exercise</li>
-                <li>Team Check-in</li>
-                <li>Project Meeting</li>
-                <li>Code Review</li>
-                <li>Reading Session</li>
-            </ul>  
-        </div>
+        <div class="right-panel">
+            <div class="card">
+                <h3>📊 Placement Readiness</h3>
+                <div class="big-score">72%</div>
+                <p>Based on DSA, Mock Tests & Revision</p>
+            </div>
+            <div class="card">
+            <h3>🎯 Weak Topics</h3>
+            <ul>
+                <li>Stack & Queue (Medium)</li>
+                <li>Dynamic Programming (Hard)</li>
+                <li>OS Scheduling</li>
+            </ul>
+            </div>
+            <div class="card">
+                <h3>🧪 Latest Mock</h3>
+                <p>Score: <b>72/100</b></p>
+                <p>Issue: Struggled in Time Complexity analysis</p>
+            </div>
         </div>
    </section>
 
-  <section class="metrics-container">
-    <div class="metric-card">
-        <div class="metric-title">Daily Goals</div>
-        <div class="metric-value">8 / 10</div>
-    </div>
-
-    <div class="metric-card">
-        <div class="metric-title">Focus Time</div>
-        <div class="metric-value">4h 32m</div>
-    </div>
-
-    <div class="metric-card">
-        <div class="metric-title">Focus Mood</div>
-        <div class="metric-value">82%</div>
-    </div>
-      
-  </section>
-  <div class="card activity-card">
-    <h3>Recent Activity</h3>
-    <div style="overflow-x: auto;">
-        <table class="activity-table">
-            <thead>
-                <tr>
-                    <th>Activity</th>
-                    <th>Time</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody id="activityTableBody">
-                 <tr>
-                    <td>Meditation Session</td>
-                    <td>08:00 AM</td>
-                    <td>✓ Completed</td>
-                </tr>
-                <tr>
-                    <td>Project Review</td>
-                    <td>10:30 AM</td>
-                    <td>Active</td>
-                </tr>
-                <tr>
-                    <td>Workout Tracking</td>
-                    <td>01:00 PM</td>
-                    <td>Pending</td>
-                </tr>
-                <tr>
-                    <td>Reading Habit</td>
-                    <td>04:00 PM</td>
-                    <td>✓ Completed</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    </div>
     <div class="Tasks" id="Tasks">
-        <div class="dsa" id="dsa">
-            <h2>DSA</h2>
-            <p>To complete one question</p>
-            <div class="task">
-                <input type="checkbox" id="check1">
-                <label for="check1">Completed</label>
-            </div>
-        </div>
-        <div class="aptitude" id="aptitude">
-            <h2>APTITUDE</h2>
-            <p>To cover one topic</p>
-            <div class="task">
-                <input type="checkbox" id="check2">
-                <label for="check2">Completed</label>
-            </div>
-        </div>
-        <div class="web-d" id="web-d">
-            <h2>WEB-D</h2>
-            <p>To cover new topic</p>
-            <div class="task">
-                <input type="checkbox" id="check3">
-                <label for="check3">Completed</label>
-            </div>
-        </div>
-        <div class="revision" id="revision">
-            <h2>REVISION</h2>
-            <p>Revise the previous topic</p>
-            <div class="task">
-                <input type="checkbox" id="check4">
-                <label for="check4">Completed</label>
-            </div>
-        </div>
-    </div>
-    <div class="Progress" id="Progress">
 
+        <h2>Daily Focus Tasks</h2>
+
+        <div class="task-card">
+            <input type="checkbox" id="t1">
+            <label for="t1">Solve 2 DSA Medium Problems</label>
+        </div>
+
+        <div class="task-card">
+            <input type="checkbox" id="t2">
+            <label for="t2">Revise DBMS Indexing</label>
+        </div>
+
+        <div class="task-card">
+            <input type="checkbox" id="t3">
+            <label for="t3">Practice Aptitude (30 mins)</label>
+        </div>
+
+        <div class="task-card">
+            <input type="checkbox" id="t4">
+            <label for="t4">Update Resume / Projects</label>
+        </div>
+
+    </div>
+
+    <div class="Progress" id="Progress">
+        <h2>📈 Coding Progress</h2>
         <div class="Coding-Progress">
            <div class="Java">
                 <i class="fa-brands fa-java"></i>
@@ -176,26 +126,29 @@
                 <div class="Progress-bar">10%</div>
             </div>
         </div>
-        <div class="Sem-subject-Progress">
-            <div class="subject1">
-                <p>Compiler Design</p>
-                <div class="Progress-bar">30%</div>
-            </div>
-            <div class="subject2">
-                <p>Project Management</p>
-                <div class="Progress-bar">60%</div>
-            </div>
-            <div class="subject3">
-                <p>Machine Learning</p>
-                <div class="Progress-bar">45%</div>
-            </div>
-             <div class="subject4">
-                <p>Computer Networks</p>
-                <div class="Progress-bar">80%</div>
-            </div>
-        </div>
     </div>
-     <footer class="footer-section">
+    
+    <div class="Notes" id="Notes">
+        <h2>📝 Notes</h2>
+
+        <div class="note-card">Binary Search → 2 patterns revise</div>
+        <div class="note-card">DP → Knapsack + LIS focus</div>
+        <div class="note-card">Resume → Add project screenshots</div>
+        <div class="note-card">Mock Interview → Improve time complexity answers</div>
+    </div>
+
+    <div class="resume-card" id="Resume">
+        <p>Profile Completion: <b>80%</b></p>
+        <p id="resume-status">No resume uploaded</p>
+
+        <input type="file" id="resumeUpload" accept="application/pdf" hidden>
+
+        <button id="resumeBtn" onclick="handleResumeClick()">
+            Upload Resume
+        </button>
+    </div>
+
+    <footer class="footer-section">
         <div class="foot-sec1">
             <a ><h1>Ritesh.Div</h1></a>
         </div>
@@ -204,25 +157,25 @@
             <a><i class="fa-brands fa-linkedin"></i></a>
             <a><i class="fa-brands fa-github"></i></a>
         </div>
-        <div class="foot-sec3">
-            <p>@ 2026 Ritesh Kumar Ray</p>
-            <p>B.Tech Student & Aspiring Software Developer</p>
-        </div>
+    <div class="foot-sec3">
+        <p>@ 2026 Ritesh Kumar Ray</p>
+        <p>B.Tech Student & Aspiring Software Developer</p>
+    </div>
     </footer>
 
-<div id="sidebar" class="sidebar">
-    <div class="profile">
-        <i class="fa-solid fa-circle-user"></i>
-        </div>
-    <h3>Profile</h3>
+    <div id="sidebar" class="sidebar">
+        <div class="profile">
+            <i class="fa-solid fa-circle-user"></i>
+            </div>
+        <h3>Profile</h3>
 
-    <button onclick="logout()">Logout
-    <i class="fa-solid fa-right-from-bracket"></i>
-    </button>
+        <button onclick="logout()">Logout
+        <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
 
-</div>
+    </div>
 
-<div id="overlay" onclick="closeSidebar()"></div>
+  <div id="overlay" onclick="closeSidebar()"></div>
   <script src="app.js"></script>
 </body>
 </html>

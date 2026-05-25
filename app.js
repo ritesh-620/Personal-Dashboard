@@ -1,43 +1,9 @@
-const recentActivities = [
-    { name: "Meditation Session", time: "08:00 AM", status: "✓ Completed" },
-    { name: "Project Review", time: "10:30 AM", status: "Active" },
-    { name: "Workout Tracking", time: "01:00 PM", status: "Pending" },
-    { name: "Reading Habit", time: "04:00 PM", status: "✓ Completed" }
-];
-
 document.addEventListener("DOMContentLoaded", () => {
     renderActivityLog();
     initializeSmoothScrolling();
     setupLiveGoalsCounter();
     renderVisualProgressBars();
 });
-
-function renderActivityLog() {
-    const tableBody = document.getElementById("activityTableBody");
-    if (!tableBody) return;
-
-    tableBody.innerHTML = "";
-    recentActivities.forEach(item => {
-        let statusStyle = "";
-        if (item.status.includes("Completed")) {
-            statusStyle = "color: #10B981; font-weight: 600;"; 
-        } else if (item.status === "Active") {
-            statusStyle = "color: #3b82f6; font-weight: 600;"; 
-        } else {
-            statusStyle = "color: #f59e0b; font-weight: 600;"; 
-        }
-
-        const tableRowElement = `
-            <tr>
-                <td><strong>${item.name}</strong></td>
-                <td>${item.time}</td>
-                <td><span style="${statusStyle}">${item.status}</span></td>
-            </tr>
-        `;
-        tableBody.innerHTML += tableRowElement;
-    });
-}
-
 
 function initializeSmoothScrolling() {
     const actionLinks = document.querySelectorAll(".nav-container a");
@@ -56,42 +22,6 @@ function initializeSmoothScrolling() {
             }
         });
     });
-}
-
-function setupLiveGoalsCounter() {
-  
-    const metricCards = document.querySelectorAll('.metric-card');
-    let goalsCardValueNode = null;
-
-    metricCards.forEach(card => {
-        if(card.querySelector('.metric-title').textContent.trim() === "Daily Goals") {
-            goalsCardValueNode = card.querySelector('.metric-value');
-        }
-    });
-
-    if (!goalsCardValueNode) return;
-
-    const taskCheckboxes = document.querySelectorAll('.Tasks input[type="checkbox"]');
-    
-    function updateCounter() {
-        const totalTasks = taskCheckboxes.length;
-    
-        const completedTasks = Array.from(taskCheckboxes).filter(cb => cb.checked).length;
-        
-    
-        const baseScore = 6; 
-        const liveScore = baseScore + completedTasks;
-        const totalPossible = baseScore + totalTasks;
-
-        
-        goalsCardValueNode.textContent = `${liveScore} / ${totalPossible}`;
-    }
-
-    taskCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', updateCounter);
-    });
-
-    updateCounter();
 }
 
 function renderVisualProgressBars() {
@@ -113,6 +43,36 @@ function renderVisualProgressBars() {
         }
     });
 }
+
+let resumeURL = null;
+
+function handleResumeClick() {
+  const input = document.getElementById("resumeUpload");
+
+  // If resume already uploaded → open it
+  if (resumeURL) {
+    window.open(resumeURL, "_blank");
+    return;
+  }
+
+  // else trigger upload
+  input.click();
+}
+
+// when file selected
+document.getElementById("resumeUpload").addEventListener("change", function (event) {
+  const file = event.target.files[0];
+
+  if (file && file.type === "application/pdf") {
+    resumeURL = URL.createObjectURL(file);
+
+    document.getElementById("resume-status").innerText = "Resume uploaded ✔";
+
+    document.getElementById("resumeBtn").innerText = "View Resume";
+  } else {
+    alert("Please upload a PDF file only");
+  }
+});
 
 function openSidebar(){
   document.getElementById("sidebar").classList.add("active");

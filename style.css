@@ -38,168 +38,10 @@ body {
     background-color: rgba(15, 23, 42, 0.15);
     color: #000000;
 }
-
-
-.main-container {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr; 
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 40px 40px 40px;
-    align-items: center;
-    gap: 40px;
-}
-
-.intro {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 16px;
-}
-
-.intro1, .intro3 {
-    color: #33C3F0;
-}
-
-.text1 {
-    font-size: 20px;
-    color: #94A3B8;
-    font-weight: 400;
-}
-
-.RIGHT {
-    width: 100%;
-}
-
-.Upcoming-Tasks {
-    background-color: #1E293B; 
-    color: whitesmoke;
-    border: 2px solid turquoise;
-    border-radius: 8px;
-    padding: 24px;
-    width: 100%;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-}
-
-.Upcoming-Tasks h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #33C3F0;
-    border-bottom: 1px solid rgba(51, 195, 240, 0.2);
-    padding-bottom: 8px;
-}
-
-.task-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.task-list li {
-    font-size: 16px;
-    padding-left: 15px;
-    position: relative;
-}
-
-.task-list li::before {
-    content: "•";
-    color: turquoise;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-
-.metrics-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 40px;
-}
-
-.metric-card {
-    background-color: #1E293B; 
-    color: whitesmoke;
-    border: 1px solid #334155;
-    border-radius: 10px;
-    padding: 24px;
-    text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-}
-
-.metric-card:hover {
-    transform: translateY(-2px);
-}
-
-.metric-title {
-    font-size: 0.9rem;
-    color: #94A3B8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
-
-.metric-value {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-top: 10px;
-    color: #33C3F0;
-}
-
-
-.activity-card {
-    max-width: 1120px;
-    margin: 40px auto 0 auto;
-    background-color: #1E293B;
-    border: 1px solid #334155;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
-}
-
-.activity-card h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #33C3F0;
-}
-
-.activity-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-}
-
-.activity-table th {
-    font-size: 0.85rem;
-    color: #94A3B8;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #334155;
-}
-
-.activity-table td {
-    padding: 14px 0;
-    font-size: 0.95rem;
-    border-bottom: 1px solid #334155;
-    color: #E2E8F0;
-}
-
-.activity-table tr:last-child td {
-    border-bottom: none;
-}
-
-
 .dropdown {
     position: relative;
     display: inline-block;
 }
-
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -235,7 +77,140 @@ body {
 .dropdown:hover .dropdown-btn {
     background-color: rgba(15, 23, 42, 0.1);
 }
+.main-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 40px 40px;
+    align-items: center;
+    gap: 40px;
+}
 
+.intro {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.intro1 {
+    color: #33C3F0;
+}
+
+.text1 {
+    font-size: 20px;
+    color: #94A3B8;
+    font-weight: 400;
+}
+.hero-description{
+    color:#94A3B8;
+    font-size:18px;
+    margin-top:15px;
+    max-width:500px;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    margin-top:25px;
+    display:flex;
+    gap:15px;
+}
+
+.hero-btn{
+    padding:12px 22px;
+    background:#33C3F0;
+    color:#0F172A;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+.secondary-btn{
+    background:#1E293B;
+    color:white;
+    border:1px solid #334155;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: #1e293b;
+  color: white;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #e2e8f0;
+}
+.big-score {
+  font-size: 40px;
+  font-weight: bold;
+  color: #38bdf8;
+  margin: 10px 0;
+}
+.card p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 5px 0;
+}
+.card ul {
+  padding-left: 18px;
+}
+
+.card li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #cbd5e1;
+}
+.Tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 40px 10%;
+}
+
+.Tasks h2 {
+  color: #33C3F0;
+  margin-bottom: 10px;
+}
+
+.task-card {
+  background: #1E293B;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #334155;
+}
+
+.task-card label {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: gray;
+}
 .Coding-Progress{
     display: flex;
     flex-wrap: wrap;
@@ -244,24 +219,6 @@ body {
     padding: 40px 10%;
 }
 .Java,.Html,.Css,.javascript,.springboot{
-    height: 200px;
-    width: 200px;
-    background-color: #1E293B;
-    border: 1px solid #334155;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.Sem-subject-Progress{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 10%;
-}
-.subject1,.subject2,.subject3,.subject4,.subject5{
     height: 200px;
     width: 200px;
     background-color: #1E293B;
@@ -281,30 +238,54 @@ body {
     font-size: 14px;
     font-weight: 500;
 }
-.Tasks{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 10%;
-}
-.dsa,.aptitude,.web-d,.revision{
-    height: 120px;
-    width: 100%;
-    background-color: #1E293B;
-    border: 1px solid #334155;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-h2{
+.Progress h2{
     color: #33C3F0;
+    margin-bottom: 10px;
+    text-align: center;
 }
-input[type="checkbox"]:checked + label{
-  text-decoration: line-through;
-  color: gray;
+.Notes {
+  padding: 40px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.Notes h2 {
+  color: #33C3F0;
+  margin-bottom: 10px;
+}
+
+.note-card {
+  background: #1E293B;
+  padding: 14px;
+  border-radius: 12px;
+  border-left: 4px solid #33C3F0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+.Resume {
+  padding: 40px 10%;
+}
+
+.resume-card {
+  background: #1E293B;
+  padding: 16px;
+  border-radius: 12px;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+}
+
+.resume-card button {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #33C3F0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.resume-card button:hover {
+  background: #22b0dd;
 }
 
 @media (max-width: 768px) {
@@ -330,14 +311,11 @@ input[type="checkbox"]:checked + label{
     .intro {
         font-size: 32px;
     }
-    .metrics-container {
-        padding: 10px 20px;
-    }
     .activity-card {
         margin: 20px;
         padding: 15px;
     }
-    .Tasks, .Coding-Progress, .Sem-subject-Progress {
+    .Tasks, .Coding-Progress, .Notes, .Resume {
         padding: 20px 5%;
     }
 }
