@@ -49,17 +49,15 @@ let resumeURL = null;
 function handleResumeClick() {
   const input = document.getElementById("resumeUpload");
 
-  // If resume already uploaded → open it
   if (resumeURL) {
     window.open(resumeURL, "_blank");
     return;
   }
 
-  // else trigger upload
+  
   input.click();
 }
 
-// when file selected
 document.getElementById("resumeUpload").addEventListener("change", function (event) {
   const file = event.target.files[0];
 
